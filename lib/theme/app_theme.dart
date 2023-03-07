@@ -83,14 +83,7 @@ abstract class AppColours {
   static Color purple26 = const Color(0xFF8F3CCF).withOpacity(0.26);
   static const Color activeAppBarPurple = Color(0xFF8F3CCF);
   static const Color lightPurpleBG = Color(0xFFF3EBFA);
-
-  static const Color appGreen = Color(0xFF68BF50);
-  static const Color appRed = Color(0xFFD40909);
-  static final Color appAmber = Colors.amber.shade800;
-  static const Color appWhiteBGColour = Color(0xFFFFFFFF);
-  static const Color appGreyBGColour = Color(0xFFE5E5E5);
-  static const Color textFormFieldBGColour = Color(0xFFF2F2F2);
-  static const Color textFormFieldUnfocusedBorderColour = Color(0xFFBDBDBD);
+  static const Color lightPurple = Color(0xFFE2CCF3);
 
   //! BASE COLOURS WITH TRANSPARENCY
   static const Color appBlueTransparent = Color(0xFFC8DCFF);

@@ -3,6 +3,7 @@ import 'package:fertility_friend/theme/app_theme.dart';
 import 'package:fertility_friend/utils/app_screen_utils.dart';
 import 'package:fertility_friend/utils/constants.dart';
 import 'package:fertility_friend/widgets/app_elevated_button.dart';
+import 'package:fertility_friend/widgets/spacer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,15 +19,20 @@ class CustomAppBar extends ConsumerWidget {
     return Container(
         height: 120.0.h,
         width: double.infinity.w,
-        color: Colors.white,
+        color: Colors.transparent,
         padding: AppScreenUtils.appGeneralPadding,
-        child:
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        child: Row(children: [
           //! LOGO AND NAME
           AppLogoAndName(),
 
+          //! SPACER
+          AppSpacer(width: 150.0.w),
+
           //! MENU ITEMS
           AppBarMenuItem(currentPageIndex: currentPageIndex),
+
+          //! SPACER
+          const Spacer(),
 
           //! BUTTONS
           AppBarButtons()
@@ -92,18 +98,27 @@ class AppBarMenuItem extends ConsumerWidget {
         child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: AppBarMenu.listOfMenuItems
-                .map((menuItem) => TextButton(
-                    onPressed: () {},
-                    child: Text(menuItem,
-                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                            color: currentPageIndex ==
-                                    AppBarMenu.listOfMenuItems.indexOf(menuItem)
-                                ? AppColours.activeAppBarPurple
-                                : AppColours.textBlack80,
-                            fontWeight: currentPageIndex ==
-                                    AppBarMenu.listOfMenuItems.indexOf(menuItem)
-                                ? FontWeight.w500
-                                : FontWeight.w400))))
+                .map((menuItem) => Container(
+                    margin: menuItem == AppBarMenu.about
+                        ? EdgeInsets.zero
+                        : EdgeInsets.only(right: 55.0.w),
+                    child: TextButton(
+                        onPressed: () {},
+                        child: Text(menuItem,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyLarge!
+                                .copyWith(
+                                    color: currentPageIndex ==
+                                            AppBarMenu.listOfMenuItems
+                                                .indexOf(menuItem)
+                                        ? AppColours.activeAppBarPurple
+                                        : AppColours.textBlack80,
+                                    fontWeight: currentPageIndex ==
+                                            AppBarMenu.listOfMenuItems
+                                                .indexOf(menuItem)
+                                        ? FontWeight.w500
+                                        : FontWeight.w400)))))
                 .toList()));
   }
 }
@@ -128,6 +143,9 @@ class AppBarButtons extends ConsumerWidget {
                         onPressed: () {},
                         buttonName: buttonName,
                         isTransparent: buttonName == AppBarMenu.login,
+                        nameColour: buttonName == AppBarMenu.login
+                            ? AppColours.buttonBlack
+                            : AppColours.white,
                         borderSide:
                             BorderSide(color: AppColours.black, width: 2.sp))))
                 .toList()));

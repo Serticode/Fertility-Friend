@@ -1,11 +1,28 @@
 //! CLASS CONTAINS ALL APP ICONS AND IMAGES
 abstract class AppIconAndImageURLS {
   static const String logo = "lib/assets/icons/logo.svg";
+  static const String betty = "lib/assets/images/betty.png";
+  static const String ruby = "lib/assets/images/ruby.png";
+  static const String conan = "lib/assets/images/conan.png";
+  static const String pointingWoman = "lib/assets/images/pointing_woman.png";
+  static const String periodTracking = "lib/assets/images/period_tracking.svg";
+  static const String diagnosis = "lib/assets/images/diagnosis.svg";
 }
 
 //! CLASS ALL BASIC TEXTS USED IN APP
 abstract class AppTexts {
   static const String name = "Fertility Friend";
+
+  //! PAGE ONE TEXTS
+  static const String ultimateCompanion =
+      "The ultimate companion \nfor your reproductive journey";
+  static const String takeControl =
+      "Take control of your reproductive health, \ntrack your symptoms with ease";
+  static const String getStartedNow = "Get started now";
+  static const String hundredK = "100k+";
+  static const String womenHelped = "Women helped";
+  static const String periodTracking = "Period tracking";
+  static const String personalizedDiagnosis = "Personalized diagnosis";
 }
 
 //! APP BAR MENU
