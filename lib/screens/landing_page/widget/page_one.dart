@@ -18,50 +18,51 @@ class PageOne extends ConsumerWidget {
       Row(children: [
         //! WHITE SIDE - //! NOTICE AND BUTTON
         Expanded(
-            child: Container(
-                height: MediaQuery.of(context).size.height,
-                color: AppColours.white,
-                padding: AppScreenUtils.appGeneralPadding,
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      //! TITLE
-                      AppFadeAnimation(
-                          delay: 2.2,
-                          child: Text(AppTexts.ultimateCompanion,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyLarge!
-                                  .copyWith(
-                                      fontSize: 65.0.sp,
-                                      color: AppColours.black))),
+          child: Container(
+              height: MediaQuery.of(context).size.height,
+              color: AppColours.white,
+              padding: AppScreenUtils.appGeneralPadding,
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    //! TITLE
+                    AppFadeAnimation(
+                        delay: 2.6,
+                        child: Text(AppTexts.ultimateCompanion,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyLarge!
+                                .copyWith(
+                                    fontSize: 65.0.sp,
+                                    color: AppColours.black))),
 
-                      //! SPACER
-                      AppScreenUtils.verticalSpaceLarge,
+                    //! SPACER
+                    AppScreenUtils.verticalSpaceLarge,
 
-                      //! SUB TITLE
-                      AppFadeAnimation(
-                          delay: 2.6,
-                          child: Text(AppTexts.ultimateCompanion,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyMedium!
-                                  .copyWith(
-                                      fontSize: 32.0.sp,
-                                      fontWeight: FontWeight.w400,
-                                      color: AppColours.textBlack80))),
+                    //! SUB TITLE
+                    AppFadeAnimation(
+                        delay: 2.8,
+                        child: Text(AppTexts.ultimateCompanion,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium!
+                                .copyWith(
+                                    fontSize: 32.0.sp,
+                                    fontWeight: FontWeight.w400,
+                                    color: AppColours.textBlack80))),
 
-                      //! SPACER
-                      AppScreenUtils.verticalSpaceLarge,
+                    //! SPACER
+                    AppScreenUtils.verticalSpaceLarge,
 
-                      //! BUTTON
-                      AppElevatedButton(
-                          onPressed: () {},
-                          buttonName: AppTexts.getStartedNow,
-                          width: 182.0.w,
-                          isTransparent: false)
-                    ]))),
+                    //! BUTTON
+                    AppElevatedButton(
+                        onPressed: () {},
+                        buttonName: AppTexts.getStartedNow,
+                        width: 182.0.w,
+                        isTransparent: false)
+                  ])),
+        ),
 
         //! PURPLE SIDE
         Container(
@@ -85,7 +86,7 @@ class PageOne extends ConsumerWidget {
           right: 220.0.w,
           top: MediaQuery.of(context).size.height * 0.25,
           child: AppFadeAnimation(
-            delay: 2.8,
+            delay: 3.0,
             child: Container(
                 width: 180.0.w,
                 height: 85.0.h,
@@ -124,7 +125,7 @@ class PageOne extends ConsumerWidget {
           right: 138.0.w,
           top: MediaQuery.of(context).size.height * 0.75,
           child: AppFadeAnimation(
-            delay: 3.0,
+            delay: 3.2,
             child: Container(
                 width: 240.0.w,
                 height: 85.0.h,
@@ -162,7 +163,7 @@ class PageOne extends ConsumerWidget {
           right: 492.0.w,
           top: MediaQuery.of(context).size.height * 0.85,
           child: AppFadeAnimation(
-              delay: 3.2,
+              delay: 3.4,
               child: Container(
                   width: 220.0.w,
                   height: 85.0.h,

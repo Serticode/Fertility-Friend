@@ -5,7 +5,6 @@ import 'package:fertility_friend/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class ResultAndDiagnosis extends ConsumerWidget {
   const ResultAndDiagnosis({super.key});
@@ -43,7 +42,7 @@ class ResultAndDiagnosis extends ConsumerWidget {
             Transform.scale(
                 scale: 1.4,
                 child: AppFadeAnimation(
-                    delay: 2.4,
+                    delay: 3.0,
                     child: SizedBox(
                         width: 470.0.w,
                         height: 533.0.h,
@@ -56,7 +55,7 @@ class ResultAndDiagnosis extends ConsumerWidget {
             //! TEXT
             Flexible(
                 child: AppFadeAnimation(
-                    delay: 2.8,
+                    delay: 3.2,
                     child: Text(AppTexts.resultAndDiagnosisBody,
                         textAlign: TextAlign.justify,
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(

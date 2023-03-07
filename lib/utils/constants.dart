@@ -35,6 +35,7 @@ abstract class AppTexts {
   //! PAGE TWO TEXTS
   static const String why = "Why";
   static const String fertilityFriend = "Fertility-Friend?";
+  static const String fertilityFriendNoHyphen = "Fertility Friend";
 
   static const String confidentiality = "Confidentiality";
   static const String location = "Location";
@@ -62,6 +63,39 @@ abstract class AppTexts {
   static const String resultAndDiagnosis = "Results & Diagnostics";
   static const String resultAndDiagnosisBody =
       "At Fertility-Friend, we understand the importance of accurate and reliable results when it comes to reproductive health. That's why out team conducted extensive research and gathered insights from women currently experiencing reproductive illnesses and also women you have experienced it. \n\nOur diagnostic test uses a sophisticated  knowledge base that connects symptoms to potential illnesses. Simply log in your symptoms and receive a personalized diagnosis based on your unique inputs.";
+
+//! FOOTER
+  static const String copyRight =
+      "Copyright © Fertilityfriend. All rights reserved.";
+
+  static const String designedBy = "Designed by Mfonabasi.";
+  static const String developedBy = "Developed by Serticode.";
+  static const String reproductiveHealthCompanion =
+      "Reproductive health companion";
+  static const String email = "hello@fertilityfriend.com";
+  static const String phoneNumber = "+234 903 7362 896";
+
+  static const String company = "Company";
+  static const String legal = "Legal";
+  static const String support = "Support";
+
+  static const List<String> links = [company, legal, support];
+  static const List<String> companyList = [
+    "About us",
+    "Careers",
+    "Partners",
+  ];
+  static const List<String> legalList = [
+    "Terms & Conditions",
+    "Privacy policy",
+  ];
+  static const List<String> supportList = [
+    "FAQS",
+    "Contact",
+  ];
+
+  static const String subscribeToOurNewsLetter = "Subscribe to our news letter";
+  static const String subscribe = "Subscribe";
 }
 
 //! APP BAR MENU

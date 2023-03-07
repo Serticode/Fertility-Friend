@@ -20,6 +20,7 @@ class WhyFertilityFriend extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
         height: 1080.0.h,
+        width: MediaQuery.of(context).size.width,
         decoration: const BoxDecoration(color: AppColours.teal),
         padding: AppScreenUtils.appGeneralPadding,
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -47,7 +48,7 @@ class WhyFertilityFriend extends ConsumerWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: AppTexts.pageTwoTitles
                   .map((title) => AppFadeAnimation(
-                      delay: (AppTexts.pageTwoTitles.indexOf(title) + 1) * 2,
+                      delay: (AppTexts.pageTwoTitles.indexOf(title) + 1) * 2.5,
                       child: WhyFertilityFriendPostWidget(
                           title: title,
                           subtitle: AppTexts.pageTwoSubtitles
