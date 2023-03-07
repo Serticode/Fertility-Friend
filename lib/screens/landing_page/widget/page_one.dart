@@ -28,7 +28,7 @@ class PageOne extends ConsumerWidget {
                     children: [
                       //! TITLE
                       AppFadeAnimation(
-                          delay: 1.4,
+                          delay: 2.2,
                           child: Text(AppTexts.ultimateCompanion,
                               style: Theme.of(context)
                                   .textTheme
@@ -42,7 +42,7 @@ class PageOne extends ConsumerWidget {
 
                       //! SUB TITLE
                       AppFadeAnimation(
-                          delay: 1.6,
+                          delay: 2.6,
                           child: Text(AppTexts.ultimateCompanion,
                               style: Theme.of(context)
                                   .textTheme
@@ -85,7 +85,7 @@ class PageOne extends ConsumerWidget {
           right: 220.0.w,
           top: MediaQuery.of(context).size.height * 0.25,
           child: AppFadeAnimation(
-            delay: 1.4,
+            delay: 2.8,
             child: Container(
                 width: 180.0.w,
                 height: 85.0.h,
@@ -124,7 +124,7 @@ class PageOne extends ConsumerWidget {
           right: 138.0.w,
           top: MediaQuery.of(context).size.height * 0.75,
           child: AppFadeAnimation(
-            delay: 1.6,
+            delay: 3.0,
             child: Container(
                 width: 240.0.w,
                 height: 85.0.h,
@@ -162,7 +162,7 @@ class PageOne extends ConsumerWidget {
           right: 492.0.w,
           top: MediaQuery.of(context).size.height * 0.85,
           child: AppFadeAnimation(
-              delay: 1.8,
+              delay: 3.2,
               child: Container(
                   width: 220.0.w,
                   height: 85.0.h,

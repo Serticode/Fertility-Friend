@@ -61,7 +61,7 @@ abstract class AppTexts {
   //! PAGE THREE TEXTS
   static const String resultAndDiagnosis = "Results & Diagnostics";
   static const String resultAndDiagnosisBody =
-      "At Fertility-Friend, we understand the importance of accurate and reliable results when it comes to reproductive health. That's why out team conducted extensive research and gathered insights from women currently experiencing reproductive illnesses and also women you have experienced it. Our diagnostic test uses a sophisticated  knowledge base that connects symptoms to potential illnesses. Simply log in your symptoms and receive a personalized diagnosis based on your unique inputs.";
+      "At Fertility-Friend, we understand the importance of accurate and reliable results when it comes to reproductive health. That's why out team conducted extensive research and gathered insights from women currently experiencing reproductive illnesses and also women you have experienced it. \n\nOur diagnostic test uses a sophisticated  knowledge base that connects symptoms to potential illnesses. Simply log in your symptoms and receive a personalized diagnosis based on your unique inputs.";
 }
 
 //! APP BAR MENU

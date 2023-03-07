@@ -42,24 +42,28 @@ class ResultAndDiagnosis extends ConsumerWidget {
             //! IMAGE
             Transform.scale(
                 scale: 1.4,
-                child: SizedBox(
-                  width: 470.0.w,
-                  height: 533.0.h,
-                  child: Image.asset(AppIconAndImageURLS.resultsAndDiagnosis),
-                )),
+                child: AppFadeAnimation(
+                    delay: 2.4,
+                    child: SizedBox(
+                        width: 470.0.w,
+                        height: 533.0.h,
+                        child: Image.asset(
+                            AppIconAndImageURLS.resultsAndDiagnosis)))),
 
             //! SPACER
             AppScreenUtils.horizontalSpaceMedium,
 
             //! TEXT
             Flexible(
-                child: Text(AppTexts.resultAndDiagnosisBody,
-                    textAlign: TextAlign.justify,
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        fontSize: 24.0.sp,
-                        fontWeight: FontWeight.w500,
-                        height: 4.0.sp,
-                        color: AppColours.textGrey.withOpacity(0.70))))
+                child: AppFadeAnimation(
+                    delay: 2.8,
+                    child: Text(AppTexts.resultAndDiagnosisBody,
+                        textAlign: TextAlign.justify,
+                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                            fontSize: 28.0.sp,
+                            fontWeight: FontWeight.w500,
+                            height: 4.0.sp,
+                            color: AppColours.textBlack80))))
           ])
         ]));
   }
