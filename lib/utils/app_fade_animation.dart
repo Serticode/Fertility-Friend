@@ -23,7 +23,7 @@ class AppFadeAnimation extends StatelessWidget {
       ..scene(
               begin: const Duration(milliseconds: 0),
               duration: Duration(milliseconds: (150 * delay).round()))
-          .tween("translateY", Tween(begin: translateY ?? 35.0, end: 0.0))
+          .tween("translateY", Tween(begin: translateY ?? 75.0, end: 0.0))
 
       //! OPACITY TRACK
       ..scene(

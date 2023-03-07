@@ -70,6 +70,8 @@ abstract class AppColours {
   //! BASE COLOURS
   static const Color white = Color(0xFFFFFFFF);
   static const Color textBlack = Color(0xFF262626);
+  static const Color teal = Color(0xFFDFFFFC);
+  static const Color pink = Color(0xFFFFD0EB);
 
   //! TEXT COLOURS
   static Color textBlack80 = const Color(0xFF262626).withOpacity(0.8);

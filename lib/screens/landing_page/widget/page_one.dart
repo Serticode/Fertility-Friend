@@ -1,4 +1,5 @@
 import 'package:fertility_friend/theme/app_theme.dart';
+import 'package:fertility_friend/utils/app_fade_animation.dart';
 import 'package:fertility_friend/utils/app_screen_utils.dart';
 import 'package:fertility_friend/utils/constants.dart';
 import 'package:fertility_friend/widgets/app_elevated_button.dart';
@@ -26,25 +27,30 @@ class PageOne extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       //! TITLE
-                      Text(AppTexts.ultimateCompanion,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyLarge!
-                              .copyWith(
-                                  fontSize: 65.0.sp, color: AppColours.black)),
+                      AppFadeAnimation(
+                          delay: 1.4,
+                          child: Text(AppTexts.ultimateCompanion,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyLarge!
+                                  .copyWith(
+                                      fontSize: 65.0.sp,
+                                      color: AppColours.black))),
 
                       //! SPACER
                       AppScreenUtils.verticalSpaceLarge,
 
                       //! SUB TITLE
-                      Text(AppTexts.ultimateCompanion,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyMedium!
-                              .copyWith(
-                                  fontSize: 32.0.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: AppColours.textBlack80)),
+                      AppFadeAnimation(
+                          delay: 1.6,
+                          child: Text(AppTexts.ultimateCompanion,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium!
+                                  .copyWith(
+                                      fontSize: 32.0.sp,
+                                      fontWeight: FontWeight.w400,
+                                      color: AppColours.textBlack80))),
 
                       //! SPACER
                       AppScreenUtils.verticalSpaceLarge,
@@ -78,121 +84,140 @@ class PageOne extends ConsumerWidget {
       Positioned(
           right: 220.0.w,
           top: MediaQuery.of(context).size.height * 0.25,
-          child: Container(
-              width: 180.0.w,
-              height: 85.0.h,
-              padding: AppScreenUtils.containerPaddingTiny,
-              decoration: BoxDecoration(
-                  color: AppColours.white,
-                  borderRadius: BorderRadius.circular(42.0.r)),
-              child:
-                  Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
-                Container(
-                    width: 54.0.w,
-                    height: 54.0.h,
-                    padding: AppScreenUtils.containerPaddingTiny,
-                    decoration: const BoxDecoration(
-                        color: AppColours.lightPurple, shape: BoxShape.circle),
-                    child: SvgPicture.asset(AppIconAndImageURLS.periodTracking,
-                        fit: BoxFit.contain)),
+          child: AppFadeAnimation(
+            delay: 1.4,
+            child: Container(
+                width: 180.0.w,
+                height: 85.0.h,
+                padding: AppScreenUtils.containerPaddingTiny,
+                decoration: BoxDecoration(
+                    color: AppColours.white,
+                    borderRadius: BorderRadius.circular(42.0.r)),
+                child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                          width: 54.0.w,
+                          height: 54.0.h,
+                          padding: AppScreenUtils.containerPaddingTiny,
+                          decoration: const BoxDecoration(
+                              color: AppColours.lightPurple,
+                              shape: BoxShape.circle),
+                          child: SvgPicture.asset(
+                              AppIconAndImageURLS.periodTracking,
+                              fit: BoxFit.contain)),
 
-                //! NOTICE
-                Text(AppTexts.periodTracking,
-                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                        color: AppColours.deepPurple,
-                        fontSize: 24.0.sp,
-                        fontWeight: FontWeight.w500)),
-              ]))),
+                      //! NOTICE
+                      Text(AppTexts.periodTracking,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge!
+                              .copyWith(
+                                  color: AppColours.deepPurple,
+                                  fontSize: 24.0.sp,
+                                  fontWeight: FontWeight.w500)),
+                    ])),
+          )),
 
       //! PERSONALIZED DIAGNOSIS
       Positioned(
           right: 138.0.w,
           top: MediaQuery.of(context).size.height * 0.75,
-          child: Container(
-              width: 240.0.w,
-              height: 85.0.h,
-              padding: AppScreenUtils.containerPaddingTiny,
-              decoration: BoxDecoration(
-                  color: AppColours.white,
-                  borderRadius: BorderRadius.circular(42.0.r)),
-              child:
-                  Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
-                Container(
-                    width: 54.0.w,
-                    height: 54.0.h,
-                    padding: AppScreenUtils.containerPaddingTiny,
-                    decoration: const BoxDecoration(
-                        color: AppColours.lightPurple, shape: BoxShape.circle),
-                    child: SvgPicture.asset(AppIconAndImageURLS.diagnosis,
-                        fit: BoxFit.contain)),
+          child: AppFadeAnimation(
+            delay: 1.6,
+            child: Container(
+                width: 240.0.w,
+                height: 85.0.h,
+                padding: AppScreenUtils.containerPaddingTiny,
+                decoration: BoxDecoration(
+                    color: AppColours.white,
+                    borderRadius: BorderRadius.circular(42.0.r)),
+                child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                          width: 54.0.w,
+                          height: 54.0.h,
+                          padding: AppScreenUtils.containerPaddingTiny,
+                          decoration: const BoxDecoration(
+                              color: AppColours.lightPurple,
+                              shape: BoxShape.circle),
+                          child: SvgPicture.asset(AppIconAndImageURLS.diagnosis,
+                              fit: BoxFit.contain)),
 
-                //! NOTICE
-                Text(AppTexts.personalizedDiagnosis,
-                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                        color: AppColours.deepPurple,
-                        fontSize: 24.0.sp,
-                        fontWeight: FontWeight.w500)),
-              ]))),
+                      //! NOTICE
+                      Text(AppTexts.personalizedDiagnosis,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge!
+                              .copyWith(
+                                  color: AppColours.deepPurple,
+                                  fontSize: 24.0.sp,
+                                  fontWeight: FontWeight.w500)),
+                    ])),
+          )),
 
       //! 100K WOMEN - BASE
       Positioned(
           right: 492.0.w,
           top: MediaQuery.of(context).size.height * 0.85,
-          child: Container(
-              width: 220.0.w,
-              height: 85.0.h,
-              padding:
-                  EdgeInsets.symmetric(vertical: 12.0.h, horizontal: 16.0.w),
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: <Color>[
-                    const Color(0xFF808080).withOpacity(0.36),
-                    const Color(0xFF808080).withOpacity(0),
-                    const Color(0xFFFFFFFF).withOpacity(0.4)
-                  ]),
-                  borderRadius: BorderRadius.circular(42.0.r)),
-              child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                        child: Stack(children: [
-                      Align(
-                          alignment: Alignment.centerLeft,
-                          child: Image.asset(AppIconAndImageURLS.ruby)),
-                      Align(
-                          alignment: Alignment.center,
-                          child: Image.asset(AppIconAndImageURLS.betty)),
-                      Align(
-                          alignment: Alignment.centerRight,
-                          child: Image.asset(AppIconAndImageURLS.conan))
-                    ])),
+          child: AppFadeAnimation(
+              delay: 1.8,
+              child: Container(
+                  width: 220.0.w,
+                  height: 85.0.h,
+                  padding: EdgeInsets.symmetric(
+                      vertical: 12.0.h, horizontal: 16.0.w),
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(colors: <Color>[
+                        const Color(0xFF808080).withOpacity(0.36),
+                        const Color(0xFF808080).withOpacity(0),
+                        const Color(0xFFFFFFFF).withOpacity(0.4)
+                      ]),
+                      borderRadius: BorderRadius.circular(42.0.r)),
+                  child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                            child: Stack(children: [
+                          Align(
+                              alignment: Alignment.centerLeft,
+                              child: Image.asset(AppIconAndImageURLS.ruby)),
+                          Align(
+                              alignment: Alignment.center,
+                              child: Image.asset(AppIconAndImageURLS.betty)),
+                          Align(
+                              alignment: Alignment.centerRight,
+                              child: Image.asset(AppIconAndImageURLS.conan))
+                        ])),
 
-                    //! SPACER
-                    AppScreenUtils.horizontalSpaceSmall,
+                        //! SPACER
+                        AppScreenUtils.horizontalSpaceSmall,
 
-                    //! NOTICE
-                    Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(AppTexts.hundredK,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyLarge!
-                                  .copyWith(
-                                      color: AppColours.deepPurple,
-                                      fontSize: 24.0.sp,
-                                      fontWeight: FontWeight.w500)),
-                          Text(AppTexts.womenHelped,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyLarge!
-                                  .copyWith(
-                                      color: AppColours.buttonBlack,
-                                      fontSize: 21.0.sp,
-                                      fontWeight: FontWeight.w300))
-                        ])
-                  ])))
+                        //! NOTICE
+                        Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(AppTexts.hundredK,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyLarge!
+                                      .copyWith(
+                                          color: AppColours.deepPurple,
+                                          fontSize: 24.0.sp,
+                                          fontWeight: FontWeight.w500)),
+                              Text(AppTexts.womenHelped,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyLarge!
+                                      .copyWith(
+                                          color: AppColours.buttonBlack,
+                                          fontSize: 21.0.sp,
+                                          fontWeight: FontWeight.w300))
+                            ])
+                      ]))))
     ]);
   }
 }

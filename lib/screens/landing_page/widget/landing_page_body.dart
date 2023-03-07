@@ -1,4 +1,6 @@
 import 'package:fertility_friend/screens/landing_page/widget/page_one.dart';
+import 'package:fertility_friend/screens/landing_page/widget/results_and_diagnosis.dart';
+import 'package:fertility_friend/screens/landing_page/widget/why_fertility_friend.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -13,34 +15,18 @@ class LandingPageBody extends ConsumerWidget {
     return ValueListenableBuilder(
         valueListenable: _controller,
         builder: (context, value, child) => PageView(
-            scrollDirection: Axis.vertical,
-            pageSnapping: false,
-            physics: const BouncingScrollPhysics(),
-            controller: _controller.value,
-            children: const [PageOne()]));
-  }
-}
+                scrollDirection: Axis.vertical,
+                pageSnapping: false,
+                physics: const BouncingScrollPhysics(),
+                controller: _controller.value,
+                children: const [
+                  PageOne(),
 
-//!
-//!
-//! PAGE TWO - WHY FERTILITY FRIEND
-class WhyFertilityFriend extends ConsumerWidget {
-  const WhyFertilityFriend({super.key});
+                  //! FERTILITY FRIEND?
+                  WhyFertilityFriend(),
 
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Container();
-  }
-}
-
-//!
-//!
-//! PAGE THREE - RESULTS & DIAGNOSTICS
-class ResultsAndDiagnostics extends ConsumerWidget {
-  const ResultsAndDiagnostics({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Container();
+                  //! RESULTS AND DIAGNOSTICS
+                  ResultAndDiagnosis()
+                ]));
   }
 }

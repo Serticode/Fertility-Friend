@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:fertility_friend/theme/app_theme.dart';
+import 'package:fertility_friend/utils/app_fade_animation.dart';
 import 'package:fertility_friend/utils/app_screen_utils.dart';
 import 'package:fertility_friend/utils/constants.dart';
 import 'package:fertility_friend/widgets/app_elevated_button.dart';
@@ -75,11 +76,13 @@ class AppLogoAndName extends ConsumerWidget {
                   color: const Color(0xFF666666).withOpacity(0.51)),
 
               //! NAME
-              Text(AppTexts.name,
-                  style: GoogleFonts.gabriela(
-                      color: AppColours.purple71,
-                      fontSize: 21.0.sp,
-                      fontWeight: FontWeight.w400))
+              AppFadeAnimation(
+                  delay: 1.4,
+                  child: Text(AppTexts.name,
+                      style: GoogleFonts.gabriela(
+                          color: AppColours.purple71,
+                          fontSize: 21.0.sp,
+                          fontWeight: FontWeight.w400)))
             ]));
   }
 }
