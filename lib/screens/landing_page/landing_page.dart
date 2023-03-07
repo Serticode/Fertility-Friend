@@ -5,17 +5,19 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 class LandingPage extends ConsumerWidget {
   const LandingPage({super.key});
 
+  static final ValueNotifier<int> currentPageIndex = ValueNotifier(0);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-        body: Stack(children: [
-      //! BODY - BASE
-      Container(
-        color: Colors.red,
-      ),
+        body: ValueListenableBuilder(
+            valueListenable: currentPageIndex,
+            builder: (context, value, child) => Stack(children: [
+                  //! BODY - BASE
+                  Container(color: Colors.red),
 
-      //! APP BAR - TOP
-      const CustomAppBar()
-    ]));
+                  //! APP BAR - TOP
+                  CustomAppBar(currentPageIndex: currentPageIndex.value)
+                ])));
   }
 }

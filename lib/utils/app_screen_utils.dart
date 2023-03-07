@@ -1,11 +1,10 @@
-import 'package:fertility_friend/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 abstract class AppScreenUtils {
   //! PADDING
   static EdgeInsets appGeneralPadding =
-      EdgeInsets.symmetric(vertical: 34.0.h, horizontal: 50.0.w);
+      EdgeInsets.symmetric(vertical: 24.0.h, horizontal: 50.0.w);
   static const EdgeInsets headerPadding =
       EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0);
   static const EdgeInsets headerButtonPadding =
@@ -26,7 +25,7 @@ abstract class AppScreenUtils {
   static EdgeInsets textButtonPadding =
       EdgeInsets.symmetric(vertical: 8.0.h, horizontal: 6.0.w);
   static EdgeInsets elevatedButtonDefaultPadding =
-      EdgeInsets.symmetric(vertical: 9.0.h, horizontal: 13.0.w);
+      EdgeInsets.symmetric(vertical: 32.h, horizontal: 34.0.w);
 
   //! PADDING - TEXT FORM FIELDS
   static const EdgeInsets textFormFieldDefaultPadding =

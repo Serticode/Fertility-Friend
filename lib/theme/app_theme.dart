@@ -19,22 +19,22 @@ class AppTheme {
 
       //! TEXT
       textTheme: TextTheme(
-          displayLarge: GoogleFonts.inter(
+          displayLarge: GoogleFonts.poppins(
               fontSize: 40.0.sp,
               fontWeight: FontWeight.w800,
               height: 1.6.h,
               color: AppColours.header1TextColour),
-          displayMedium: GoogleFonts.inter(
+          displayMedium: GoogleFonts.poppins(
               fontSize: 18.0.sp,
               fontWeight: FontWeight.w400,
               height: 1.8.sp,
               color: AppColours.header2TextColour),
-          bodyLarge: GoogleFonts.inter(
+          bodyLarge: GoogleFonts.poppins(
               fontSize: 21.0.sp,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w500,
               height: 2.0.sp,
               color: AppColours.bodyText1TextColour),
-          bodyMedium: GoogleFonts.inter(
+          bodyMedium: GoogleFonts.poppins(
               fontSize: 16.0.sp,
               fontWeight: FontWeight.w400,
               height: 2.2.sp,
@@ -80,6 +80,8 @@ abstract class AppColours {
 
   static const Color deepPurple = Color(0xFF521D7A);
   static Color purple71 = const Color(0xFF8F3CCF).withOpacity(0.71);
+  static Color purple26 = const Color(0xFF8F3CCF).withOpacity(0.26);
+  static const Color activeAppBarPurple = Color(0xFF8F3CCF);
   static const Color lightPurpleBG = Color(0xFFF3EBFA);
 
   static const Color appGreen = Color(0xFF68BF50);
