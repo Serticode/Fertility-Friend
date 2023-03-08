@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+import 'package:fertility_friend/screens/landing_page/landing_page.dart';
 import 'package:fertility_friend/theme/app_theme.dart';
 import 'package:fertility_friend/utils/app_fade_animation.dart';
 import 'package:fertility_friend/utils/app_screen_utils.dart';
@@ -11,14 +12,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CustomAppBar extends ConsumerWidget {
+class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget {
   final int currentPageIndex;
   const CustomAppBar({required this.currentPageIndex, super.key});
 
   @override
+  Size get preferredSize => Size.fromHeight(135.0.h);
+
+  @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
-        height: 120.0.h,
         width: double.infinity.w,
         color: Colors.transparent,
         padding: AppScreenUtils.appGeneralPadding,
@@ -57,7 +60,7 @@ class AppLogoAndName extends ConsumerWidget {
             children: [
               //! SVG ICON LOGO
               Transform.scale(
-                  scale: 2.0,
+                  scale: 2.5,
                   child: Container(
                       height: 40.0.h,
                       width: 40.0.w,
@@ -65,7 +68,7 @@ class AppLogoAndName extends ConsumerWidget {
                           shape: BoxShape.circle, color: AppColours.purple71),
                       child: Center(
                           child: Transform.scale(
-                              scale: 0.4,
+                              scale: 0.5,
                               child: SvgPicture.asset(
                                   AppIconAndImageURLS.logo))))),
 
@@ -81,7 +84,7 @@ class AppLogoAndName extends ConsumerWidget {
                   child: Text(AppTexts.name,
                       style: GoogleFonts.gabriela(
                           color: AppColours.purple71,
-                          fontSize: 21.0.sp,
+                          fontSize: 24.0.sp,
                           fontWeight: FontWeight.w400)))
             ]));
   }
@@ -106,20 +109,18 @@ class AppBarMenuItem extends ConsumerWidget {
                         ? EdgeInsets.zero
                         : EdgeInsets.only(right: 55.0.w),
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () => webPageIndex.value =
+                            AppBarMenu.listOfMenuItems.indexOf(menuItem),
                         child: Text(menuItem,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyLarge!
-                                .copyWith(
-                                    color: currentPageIndex ==
-                                            AppBarMenu.listOfMenuItems
-                                                .indexOf(menuItem)
-                                        ? AppColours.activeAppBarPurple
-                                        : AppColours.textBlack80,
-                                    fontWeight: currentPageIndex ==
-                                            AppBarMenu.listOfMenuItems
-                                                .indexOf(menuItem)
+                            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                                color: currentPageIndex ==
+                                        AppBarMenu.listOfMenuItems
+                                            .indexOf(menuItem)
+                                    ? AppColours.activeAppBarPurple
+                                    : AppColours.textBlack80,
+                                fontSize: 26.0.sp,
+                                fontWeight:
+                                    currentPageIndex == AppBarMenu.listOfMenuItems.indexOf(menuItem)
                                         ? FontWeight.w500
                                         : FontWeight.w400)))))
                 .toList()));

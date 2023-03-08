@@ -25,7 +25,7 @@ abstract class AppScreenUtils {
   static EdgeInsets textButtonPadding =
       EdgeInsets.symmetric(vertical: 8.0.h, horizontal: 6.0.w);
   static EdgeInsets elevatedButtonDefaultPadding =
-      EdgeInsets.symmetric(vertical: 32.h, horizontal: 34.0.w);
+      EdgeInsets.symmetric(vertical: 32.h, horizontal: 28.0.w);
 
   //! PADDING - TEXT FORM FIELDS
   static const EdgeInsets textFormFieldDefaultPadding =

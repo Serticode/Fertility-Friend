@@ -86,6 +86,7 @@ abstract class AppColours {
   static const Color activeAppBarPurple = Color(0xFF8F3CCF);
   static const Color lightPurpleBG = Color(0xFFF3EBFA);
   static const Color lightPurple = Color(0xFFE2CCF3);
+  static const Color blogTabGrey = Color(0xFF808080);
 
   //! BASE COLOURS WITH TRANSPARENCY
   static const Color appBlueTransparent = Color(0xFFC8DCFF);

@@ -38,25 +38,27 @@ class Footer extends ConsumerWidget {
 
             //! LINKS
             Expanded(
-                child: Row(children: [
-              //! COMPANY
-              LinksWidget(
-                  title: AppTexts.links[0], sublinks: AppTexts.companyList),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                  //! COMPANY
+                  LinksWidget(
+                      title: AppTexts.links[0], sublinks: AppTexts.companyList),
 
-              //! SPACER
-              const Spacer(),
+                  //! SPACER
+                  const Spacer(),
 
-              //! LEGAL
-              LinksWidget(
-                  title: AppTexts.links[1], sublinks: AppTexts.legalList),
+                  //! LEGAL
+                  LinksWidget(
+                      title: AppTexts.links[1], sublinks: AppTexts.legalList),
 
-              //! SPACER
-              const Spacer(),
+                  //! SPACER
+                  const Spacer(),
 
-              //! SUPPORT
-              LinksWidget(
-                  title: AppTexts.links[2], sublinks: AppTexts.supportList)
-            ])),
+                  //! SUPPORT
+                  LinksWidget(
+                      title: AppTexts.links[2], sublinks: AppTexts.supportList)
+                ])),
 
             //! SPACER
             AppScreenUtils.horizontalSpaceMedium,
@@ -232,7 +234,7 @@ class SubScribeToOurNewsLetter extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Transform.scale(
-        scale: 0.85,
+        scale: 0.90,
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
           //! TITLE
           Text(AppTexts.subscribeToOurNewsLetter,
@@ -247,16 +249,25 @@ class SubScribeToOurNewsLetter extends ConsumerWidget {
           Row(children: [
             Expanded(
                 child: TextFormField(
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        fontSize: 24.0.sp,
+                        fontWeight: FontWeight.w500,
+                        color: AppColours.textBlack),
                     decoration: InputDecoration(
                         hintText: "user@email.com",
+                        contentPadding: EdgeInsets.symmetric(
+                            vertical: 6.0.h, horizontal: 12.0.w),
                         hintStyle: Theme.of(context)
                             .textTheme
                             .bodySmall!
                             .copyWith(
-                                fontSize: 32.0.sp,
+                                fontSize: 26.0.sp,
                                 fontWeight: FontWeight.w300,
                                 color: AppColours.textBlack80),
                         enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide.none,
+                            borderRadius: BorderRadius.circular(8.0.r)),
+                        focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide.none,
                             borderRadius: BorderRadius.circular(8.0.r)),
                         filled: true,

@@ -25,20 +25,20 @@ class AppElevatedButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return SizedBox(
         width: width ?? 115.0.w,
-        height: 80.0.h,
+        height: 85.0.h,
         child: ElevatedButton(
             onPressed: () => onPressed(),
             style: ElevatedButton.styleFrom(
                 shadowColor: Colors.transparent,
                 backgroundColor: isTransparent != null && isTransparent == true
-                    ? Colors.transparent //AppColours.purple26
+                    ? Colors.transparent
                     : bgColour ?? AppColours.buttonBlack,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5.0.r),
                     side: borderSide ?? BorderSide.none)),
             child: Text(buttonName,
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontSize: 21.0.sp,
+                    fontSize: 24.0.sp,
                     fontWeight: FontWeight.w500,
                     color: nameColour ?? AppColours.white))));
   }

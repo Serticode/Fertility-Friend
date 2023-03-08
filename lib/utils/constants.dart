@@ -15,6 +15,23 @@ abstract class AppIconAndImageURLS {
 
   //! PAGE TWO ICONS
   static const List<String> pageTwoIconURL = [lock, location, book];
+
+  static const String endo = "lib/assets/images/endo.png";
+  static const String pcos = "lib/assets/images/pcos.png";
+  static const String fibroid = "lib/assets/images/fibriods.png";
+  static const String cancer = "lib/assets/images/cervicalCancer.png";
+  static const String cyst = "lib/assets/images/cist.png";
+  static const String pid = "lib/assets/images/pid.png";
+
+  //! BLOG ARTICLE IMAGE LIST
+  static const List<String> articleImages = [
+    endo,
+    pcos,
+    fibroid,
+    cancer,
+    cyst,
+    pid
+  ];
 }
 
 //! CLASS ALL BASIC TEXTS USED IN APP
@@ -96,6 +113,31 @@ abstract class AppTexts {
 
   static const String subscribeToOurNewsLetter = "Subscribe to our news letter";
   static const String subscribe = "Subscribe";
+
+  //! BLOG
+  static const String ultimateReproductiveCompanion =
+      "The ultimate reproductive companion";
+  static const String ourBlogFeatures =
+      "Our blog features reproductive illnesses and possible issues with the reproductive system";
+
+  //! ARTICLE TITLES
+  static const String endo = "Endometriosis: More than just a period pain";
+  static const String pcos = "PCOS: Is it just irregular cycles?";
+  static const String fibroid = "Fibroids: Understanding the condition";
+  static const String cancer = "Cervical cancer: The fight against it";
+  static const String cyst = "Ovarian cysts: Don’t ignore the warning signs";
+  static const String pid = "PID: Protecting your reproductive health";
+  static const String article = "ARTICLE";
+  static const String readArticle = "Read article";
+
+  static const List<String> articleTitles = [
+    endo,
+    pcos,
+    fibroid,
+    cancer,
+    cyst,
+    pid
+  ];
 }
 
 //! APP BAR MENU
