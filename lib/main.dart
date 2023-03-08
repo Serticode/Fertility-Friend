@@ -23,7 +23,7 @@ class FertilityFriend extends StatelessWidget {
       splitScreenMode: true,
 
       //! 375 BY 812 - THAT'S THE LAYOUT GIVEN ON THE DESIGN BOARD
-      designSize: const Size(1440, 2993),
+      designSize: const Size(1440, 1440),
 
       //! MAIN APP
       builder: (context, child) => MaterialApp(

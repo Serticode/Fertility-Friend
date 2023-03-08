@@ -19,22 +19,22 @@ class AppTheme {
 
       //! TEXT
       textTheme: TextTheme(
-          displayLarge: GoogleFonts.inter(
+          displayLarge: GoogleFonts.poppins(
               fontSize: 40.0.sp,
               fontWeight: FontWeight.w800,
               height: 1.6.h,
               color: AppColours.header1TextColour),
-          displayMedium: GoogleFonts.inter(
+          displayMedium: GoogleFonts.poppins(
               fontSize: 18.0.sp,
               fontWeight: FontWeight.w400,
               height: 1.8.sp,
               color: AppColours.header2TextColour),
-          bodyLarge: GoogleFonts.inter(
+          bodyLarge: GoogleFonts.poppins(
               fontSize: 21.0.sp,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w500,
               height: 2.0.sp,
               color: AppColours.bodyText1TextColour),
-          bodyMedium: GoogleFonts.inter(
+          bodyMedium: GoogleFonts.poppins(
               fontSize: 16.0.sp,
               fontWeight: FontWeight.w400,
               height: 2.2.sp,
@@ -70,6 +70,8 @@ abstract class AppColours {
   //! BASE COLOURS
   static const Color white = Color(0xFFFFFFFF);
   static const Color textBlack = Color(0xFF262626);
+  static const Color teal = Color(0xFFDFFFFC);
+  static const Color pink = Color(0xFFFFD0EB);
 
   //! TEXT COLOURS
   static Color textBlack80 = const Color(0xFF262626).withOpacity(0.8);
@@ -80,15 +82,11 @@ abstract class AppColours {
 
   static const Color deepPurple = Color(0xFF521D7A);
   static Color purple71 = const Color(0xFF8F3CCF).withOpacity(0.71);
+  static Color purple26 = const Color(0xFF8F3CCF).withOpacity(0.26);
+  static const Color activeAppBarPurple = Color(0xFF8F3CCF);
   static const Color lightPurpleBG = Color(0xFFF3EBFA);
-
-  static const Color appGreen = Color(0xFF68BF50);
-  static const Color appRed = Color(0xFFD40909);
-  static final Color appAmber = Colors.amber.shade800;
-  static const Color appWhiteBGColour = Color(0xFFFFFFFF);
-  static const Color appGreyBGColour = Color(0xFFE5E5E5);
-  static const Color textFormFieldBGColour = Color(0xFFF2F2F2);
-  static const Color textFormFieldUnfocusedBorderColour = Color(0xFFBDBDBD);
+  static const Color lightPurple = Color(0xFFE2CCF3);
+  static const Color blogTabGrey = Color(0xFF808080);
 
   //! BASE COLOURS WITH TRANSPARENCY
   static const Color appBlueTransparent = Color(0xFFC8DCFF);
