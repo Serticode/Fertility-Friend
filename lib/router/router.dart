@@ -1,5 +1,6 @@
 import 'package:fertility_friend/router/routes.dart';
 import 'package:fertility_friend/screens/auth/login/login.dart';
+import 'package:fertility_friend/screens/auth/register/register.dart';
 import 'package:fertility_friend/screens/landing_page/landing_page.dart';
 import 'package:flutter/material.dart';
 
@@ -36,6 +37,13 @@ class AppNavigator {
             routeName: routeSettings.name,
             args: routeSettings.arguments,
             view: const LoginScreen());
+
+      //! LOGIN PAGE
+      case AppRoutes.registerPage:
+        return _getPageRoute(
+            routeName: routeSettings.name,
+            args: routeSettings.arguments,
+            view: const RegisterScreen());
 
       default:
         return MaterialPageRoute(

@@ -6,4 +6,7 @@ class AppRoutes {
 
   //! LOGIN PAGE
   static const loginPage = "loginPage";
+
+  //! LOGIN PAGE
+  static const registerPage = "registerPage";
 }

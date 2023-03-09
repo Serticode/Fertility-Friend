@@ -148,7 +148,9 @@ class AppBarButtons extends ConsumerWidget {
                     child: AppElevatedButton(
                         onPressed: () {
                           buttonName == AppBarMenu.register
-                              ? {}
+                              ? AppNavigator.navigateToReplacementPage(
+                                  thePageRouteName: AppRoutes.registerPage,
+                                  context: context)
                               : AppNavigator.navigateToReplacementPage(
                                   thePageRouteName: AppRoutes.loginPage,
                                   context: context);
