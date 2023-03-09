@@ -1,4 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+import 'package:fertility_friend/router/router.dart';
+import 'package:fertility_friend/router/routes.dart';
 import 'package:fertility_friend/screens/landing_page/landing_page.dart';
 import 'package:fertility_friend/theme/app_theme.dart';
 import 'package:fertility_friend/utils/app_fade_animation.dart';
@@ -144,7 +146,13 @@ class AppBarButtons extends ConsumerWidget {
                         ? EdgeInsets.only(right: 25.0.w)
                         : EdgeInsets.zero,
                     child: AppElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          buttonName == AppBarMenu.register
+                              ? {}
+                              : AppNavigator.navigateToReplacementPage(
+                                  thePageRouteName: AppRoutes.loginPage,
+                                  context: context);
+                        },
                         buttonName: buttonName,
                         isTransparent: buttonName == AppBarMenu.login,
                         nameColour: buttonName == AppBarMenu.login

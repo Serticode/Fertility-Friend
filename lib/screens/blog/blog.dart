@@ -1,11 +1,9 @@
 // ignore_for_file: deprecated_member_use
-
 import 'package:fertility_friend/screens/landing_page/widget/footer.dart';
 import 'package:fertility_friend/theme/app_theme.dart';
 import 'package:fertility_friend/utils/app_fade_animation.dart';
 import 'package:fertility_friend/utils/app_screen_utils.dart';
 import 'package:fertility_friend/utils/constants.dart';
-import 'package:fertility_friend/widgets/app_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -32,6 +32,11 @@ abstract class AppIconAndImageURLS {
     cyst,
     pid
   ];
+
+  //! AUTH PAGE
+  static const String authPage = "lib/assets/images/authpages.png";
+  static const String authClose = "lib/assets/icons/auth_close.svg";
+  static const String google = "lib/assets/icons/google.svg";
 }
 
 //! CLASS ALL BASIC TEXTS USED IN APP
@@ -138,6 +143,25 @@ abstract class AppTexts {
     cyst,
     pid
   ];
+
+  //! LOGIN
+  static const String welcomeBack = "Welcome back 👋";
+  static const String tooLong = "It's been too long. Let's catch up!";
+  static const String emailAddress = "Email address";
+  static const String password = "Password";
+  static const String forgotPassword = "Forgot password?";
+  static const String noAccount = "Don’t have an account?";
+  static const String login = "Log in";
+  static const String loginGoogle = "Log in with Google";
+  static const String register = "Register";
+
+  //! REGISTER
+  static const String getStarted = "Get started!";
+  static const String takeControlToday =
+      "Take control of your reproductive health today";
+  static const String registerGoogle = "Register with Google";
+  static const String confirmPassword = "Confirm Password";
+  static const String alreadyHaveAnAccount = "Already have an account?";
 }
 
 //! APP BAR MENU

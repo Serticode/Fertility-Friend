@@ -3,4 +3,7 @@
 class AppRoutes {
   //! LANDING PAGE
   static const landingPage = "landingPage";
+
+  //! LOGIN PAGE
+  static const loginPage = "loginPage";
 }

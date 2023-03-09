@@ -9,6 +9,7 @@ class AppElevatedButton extends ConsumerWidget {
   final String buttonName;
   final Color? bgColour;
   final Color? nameColour;
+  final Widget? child;
   final BorderSide? borderSide;
   final void Function() onPressed;
   const AppElevatedButton(
@@ -16,6 +17,7 @@ class AppElevatedButton extends ConsumerWidget {
       required this.isTransparent,
       required this.onPressed,
       this.width,
+      this.child,
       this.bgColour,
       this.nameColour,
       this.borderSide,
@@ -36,10 +38,11 @@ class AppElevatedButton extends ConsumerWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5.0.r),
                     side: borderSide ?? BorderSide.none)),
-            child: Text(buttonName,
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontSize: 24.0.sp,
-                    fontWeight: FontWeight.w500,
-                    color: nameColour ?? AppColours.white))));
+            child: child ??
+                Text(buttonName,
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        fontSize: 24.0.sp,
+                        fontWeight: FontWeight.w500,
+                        color: nameColour ?? AppColours.white))));
   }
 }

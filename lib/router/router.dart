@@ -1,4 +1,5 @@
 import 'package:fertility_friend/router/routes.dart';
+import 'package:fertility_friend/screens/auth/login/login.dart';
 import 'package:fertility_friend/screens/landing_page/landing_page.dart';
 import 'package:flutter/material.dart';
 
@@ -22,12 +23,19 @@ class AppNavigator {
   //! ROUTE GENERATOR
   static Route<dynamic> generateRoute({required RouteSettings routeSettings}) {
     switch (routeSettings.name) {
-      //! SECURITY SET UP
+      //! LANDING PAGE
       case AppRoutes.landingPage:
         return _getPageRoute(
             routeName: routeSettings.name,
             args: routeSettings.arguments,
             view: const LandingPage());
+
+      //! LOGIN PAGE
+      case AppRoutes.loginPage:
+        return _getPageRoute(
+            routeName: routeSettings.name,
+            args: routeSettings.arguments,
+            view: const LoginScreen());
 
       default:
         return MaterialPageRoute(
