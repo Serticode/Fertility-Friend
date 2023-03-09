@@ -1,3 +1,5 @@
+import 'package:fertility_friend/router/router.dart';
+import 'package:fertility_friend/router/routes.dart';
 import 'package:fertility_friend/theme/app_theme.dart';
 import 'package:fertility_friend/utils/app_fade_animation.dart';
 import 'package:fertility_friend/utils/app_screen_utils.dart';
@@ -18,51 +20,53 @@ class PageOne extends ConsumerWidget {
       Row(children: [
         //! WHITE SIDE - //! NOTICE AND BUTTON
         Expanded(
-          child: Container(
-              height: MediaQuery.of(context).size.height,
-              color: AppColours.white,
-              padding: AppScreenUtils.appGeneralPadding,
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    //! TITLE
-                    AppFadeAnimation(
-                        delay: 2.6,
-                        child: Text(AppTexts.ultimateCompanion,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyLarge!
-                                .copyWith(
-                                    fontSize: 65.0.sp,
-                                    color: AppColours.black))),
+            child: Container(
+                height: MediaQuery.of(context).size.height,
+                color: AppColours.white,
+                padding: AppScreenUtils.appGeneralPadding,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      //! TITLE
+                      AppFadeAnimation(
+                          delay: 2.6,
+                          child: Text(AppTexts.ultimateCompanion,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyLarge!
+                                  .copyWith(
+                                      fontSize: 65.0.sp,
+                                      color: AppColours.black))),
 
-                    //! SPACER
-                    AppScreenUtils.verticalSpaceLarge,
+                      //! SPACER
+                      AppScreenUtils.verticalSpaceLarge,
 
-                    //! SUB TITLE
-                    AppFadeAnimation(
-                        delay: 2.8,
-                        child: Text(AppTexts.ultimateCompanion,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyMedium!
-                                .copyWith(
-                                    fontSize: 32.0.sp,
-                                    fontWeight: FontWeight.w400,
-                                    color: AppColours.textBlack80))),
+                      //! SUB TITLE
+                      AppFadeAnimation(
+                          delay: 2.8,
+                          child: Text(AppTexts.ultimateCompanion,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium!
+                                  .copyWith(
+                                      fontSize: 32.0.sp,
+                                      fontWeight: FontWeight.w400,
+                                      color: AppColours.textBlack80))),
 
-                    //! SPACER
-                    AppScreenUtils.verticalSpaceLarge,
+                      //! SPACER
+                      AppScreenUtils.verticalSpaceLarge,
 
-                    //! BUTTON
-                    AppElevatedButton(
-                        onPressed: () {},
-                        buttonName: AppTexts.getStartedNow,
-                        width: 182.0.w,
-                        isTransparent: false)
-                  ])),
-        ),
+                      //! BUTTON
+                      AppElevatedButton(
+                          onPressed: () =>
+                              AppNavigator.navigateToReplacementPage(
+                                  thePageRouteName: AppRoutes.registerPage,
+                                  context: context),
+                          buttonName: AppTexts.getStartedNow,
+                          width: 182.0.w,
+                          isTransparent: false)
+                    ]))),
 
         //! PURPLE SIDE
         Container(

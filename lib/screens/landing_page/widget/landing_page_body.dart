@@ -22,8 +22,7 @@ class LandingPageBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) => ListView(
-        physics: const BouncingScrollPhysics(),
-        addAutomaticKeepAlives: false,
-        children: pages,
-      );
+      physics: const BouncingScrollPhysics(),
+      addAutomaticKeepAlives: false,
+      children: pages);
 }

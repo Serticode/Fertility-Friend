@@ -6,6 +6,7 @@ import 'package:fertility_friend/utils/app_screen_utils.dart';
 import 'package:fertility_friend/utils/constants.dart';
 import 'package:fertility_friend/widgets/app_elevated_button.dart';
 import 'package:fertility_friend/widgets/app_text_field.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -289,7 +290,14 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                                                             fontWeight:
                                                                 FontWeight.w600,
                                                             color: AppColours
-                                                                .activeAppBarPurple))
+                                                                .activeAppBarPurple),
+                                                    recognizer: TapGestureRecognizer()
+                                                      ..onTap = () => AppNavigator
+                                                          .navigateToReplacementPage(
+                                                              thePageRouteName:
+                                                                  AppRoutes
+                                                                      .loginPage,
+                                                              context: context))
                                               ])))
                                 ]))
                       ])))),
