@@ -144,6 +144,14 @@ abstract class AppTexts {
     pid
   ];
 
+  static const String references = "References";
+  static const String meaning = "Meaning";
+  static const String stages = "Stages";
+  static const String causes = "Causes";
+  static const String symptoms = "Symptoms";
+  static const String diagnosis = "Diagnosis";
+  static const String treatment = "Treatment";
+
   //! LOGIN
   static const String welcomeBack = "Welcome back 👋";
   static const String tooLong = "It's been too long. Let's catch up!";

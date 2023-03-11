@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:fertility_friend/router/router.dart';
 import 'package:fertility_friend/router/routes.dart';
+import 'package:fertility_friend/screens/blog/blog.dart';
 import 'package:fertility_friend/screens/landing_page/landing_page.dart';
 import 'package:fertility_friend/theme/app_theme.dart';
 import 'package:fertility_friend/utils/app_fade_animation.dart';
@@ -111,18 +112,25 @@ class AppBarMenuItem extends ConsumerWidget {
                         ? EdgeInsets.zero
                         : EdgeInsets.only(right: 55.0.w),
                     child: TextButton(
-                        onPressed: () => webPageIndex.value =
-                            AppBarMenu.listOfMenuItems.indexOf(menuItem),
+                        onPressed: () {
+                          selectedArticleValue.value = null;
+                          webPageIndex.value =
+                              AppBarMenu.listOfMenuItems.indexOf(menuItem);
+                        },
                         child: Text(menuItem,
-                            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                                color: currentPageIndex ==
-                                        AppBarMenu.listOfMenuItems
-                                            .indexOf(menuItem)
-                                    ? AppColours.activeAppBarPurple
-                                    : AppColours.textBlack80,
-                                fontSize: 26.0.sp,
-                                fontWeight:
-                                    currentPageIndex == AppBarMenu.listOfMenuItems.indexOf(menuItem)
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyLarge!
+                                .copyWith(
+                                    color: currentPageIndex ==
+                                            AppBarMenu.listOfMenuItems
+                                                .indexOf(menuItem)
+                                        ? AppColours.activeAppBarPurple
+                                        : AppColours.textBlack80,
+                                    fontSize: 26.0.sp,
+                                    fontWeight: currentPageIndex ==
+                                            AppBarMenu.listOfMenuItems
+                                                .indexOf(menuItem)
                                         ? FontWeight.w500
                                         : FontWeight.w400)))))
                 .toList()));
