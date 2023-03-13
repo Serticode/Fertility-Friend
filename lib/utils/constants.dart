@@ -151,6 +151,70 @@ abstract class AppTexts {
   static const String symptoms = "Symptoms";
   static const String diagnosis = "Diagnosis";
   static const String treatment = "Treatment";
+  static const String date = "7 February 2023 ";
+
+  static const List<String> articleTrackerTitle = [
+    meaning,
+    stages,
+    causes,
+    symptoms,
+    diagnosis,
+    treatment
+  ];
+
+  //! LIST OF REFERENCES
+
+  static List allReferences = [
+    endometriosisReferences,
+    pcosReferences,
+    fibroidReferences,
+    cervicalCancerReferences,
+    ovarianCistReferences,
+    pidReferences
+  ];
+
+//! LIST OF REFERENCES FOR EACH PAGE
+  static List<String> endometriosisReferences = [
+    "“Endometriosis - Symptoms and causes      Mayo Clinic.” https://www.mayoclinic.  org/diseases-conditions/endometriosis/symptoms-causes/syc-20354656(accessed Nov. 06, 2022)",
+    "P. Parasar, P. Ozcan, and K.L.Terry, “Endometriosis: Epidemiology, Diagnosis    and Clinical Management,” Curr. Obstet.Gynecol. Rep., vol. 6, no. 1, pp. 34–41, Mar. 2017, doi: 10.1007/S13669-017-0187-1.",
+    "“Stages of Endometriosis.” https://www. verywellhealth.com/stages-of-endometriosis-4692244 (accessed Nov. 13, 2022)",
+    "M. A. Pino, “The pharmacologic management of endometriosis,” U.S. Pharm., vol. 42, no. 9, pp. 12–16, 2017."
+  ];
+
+  static List<String> pcosReferences = [
+    "“Endometriosis - Symptoms and causes      Mayo Clinic.” https://www.mayoclinic.  org/diseases-conditions/endometriosis/symptoms-causes/syc-20354656(accessed Nov. 06, 2022)",
+    "P. Parasar, P. Ozcan, and K.L.Terry, “Endometriosis: Epidemiology, Diagnosis    and Clinical Management,” Curr. Obstet.Gynecol. Rep., vol. 6, no. 1, pp. 34–41, Mar. 2017, doi: 10.1007/S13669-017-0187-1.",
+    "“Stages of Endometriosis.” https://www. verywellhealth.com/stages-of-endometriosis-4692244 (accessed Nov. 13, 2022)",
+    "M. A. Pino, “The pharmacologic management of endometriosis,” U.S. Pharm., vol. 42, no. 9, pp. 12–16, 2017."
+  ];
+
+  static List<String> fibroidReferences = [
+    "“Endometriosis - Symptoms and causes      Mayo Clinic.” https://www.mayoclinic.  org/diseases-conditions/endometriosis/symptoms-causes/syc-20354656(accessed Nov. 06, 2022)",
+    "P. Parasar, P. Ozcan, and K.L.Terry, “Endometriosis: Epidemiology, Diagnosis    and Clinical Management,” Curr. Obstet.Gynecol. Rep., vol. 6, no. 1, pp. 34–41, Mar. 2017, doi: 10.1007/S13669-017-0187-1.",
+    "“Stages of Endometriosis.” https://www. verywellhealth.com/stages-of-endometriosis-4692244 (accessed Nov. 13, 2022)",
+    "M. A. Pino, “The pharmacologic management of endometriosis,” U.S. Pharm., vol. 42, no. 9, pp. 12–16, 2017."
+  ];
+
+  static List<String> cervicalCancerReferences = [
+    "“Endometriosis - Symptoms and causes      Mayo Clinic.” https://www.mayoclinic.  org/diseases-conditions/endometriosis/symptoms-causes/syc-20354656(accessed Nov. 06, 2022)",
+    "P. Parasar, P. Ozcan, and K.L.Terry, “Endometriosis: Epidemiology, Diagnosis    and Clinical Management,” Curr. Obstet.Gynecol. Rep., vol. 6, no. 1, pp. 34–41, Mar. 2017, doi: 10.1007/S13669-017-0187-1.",
+    "“Stages of Endometriosis.” https://www. verywellhealth.com/stages-of-endometriosis-4692244 (accessed Nov. 13, 2022)",
+    "M. A. Pino, “The pharmacologic management of endometriosis,” U.S. Pharm., vol. 42, no. 9, pp. 12–16, 2017."
+  ];
+
+  static List<String> ovarianCistReferences = [
+    "“Endometriosis - Symptoms and causes      Mayo Clinic.” https://www.mayoclinic.  org/diseases-conditions/endometriosis/symptoms-causes/syc-20354656(accessed Nov. 06, 2022)",
+    "P. Parasar, P. Ozcan, and K.L.Terry, “Endometriosis: Epidemiology, Diagnosis    and Clinical Management,” Curr. Obstet.Gynecol. Rep., vol. 6, no. 1, pp. 34–41, Mar. 2017, doi: 10.1007/S13669-017-0187-1.",
+    "“Stages of Endometriosis.” https://www. verywellhealth.com/stages-of-endometriosis-4692244 (accessed Nov. 13, 2022)",
+    "M. A. Pino, “The pharmacologic management of endometriosis,” U.S. Pharm., vol. 42, no. 9, pp. 12–16, 2017."
+  ];
+
+  static List<String> pidReferences = [
+    "“Endometriosis - Symptoms and causes      Mayo Clinic.” https://www.mayoclinic.  org/diseases-conditions/endometriosis/symptoms-causes/syc-20354656(accessed Nov. 06, 2022)",
+    "P. Parasar, P. Ozcan, and K.L.Terry, “Endometriosis: Epidemiology, Diagnosis    and Clinical Management,” Curr. Obstet.Gynecol. Rep., vol. 6, no. 1, pp. 34–41, Mar. 2017, doi: 10.1007/S13669-017-0187-1.",
+    "“Stages of Endometriosis.” https://www. verywellhealth.com/stages-of-endometriosis-4692244 (accessed Nov. 13, 2022)",
+    "M. A. Pino, “The pharmacologic management of endometriosis,” U.S. Pharm., vol. 42, no. 9, pp. 12–16, 2017."
+  ];
 
   //! LOGIN
   static const String welcomeBack = "Welcome back 👋";

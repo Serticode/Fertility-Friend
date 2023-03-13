@@ -1,4 +1,5 @@
 // ignore_for_file: deprecated_member_use
+import 'package:fertility_friend/screens/article/article_page.dart';
 import 'package:fertility_friend/screens/article/cervical_cancer.dart';
 import 'package:fertility_friend/screens/article/endometriosis.dart';
 import 'package:fertility_friend/screens/landing_page/widget/footer.dart';
@@ -58,7 +59,8 @@ class _BlogPageState extends ConsumerState<BlogPage>
     return ValueListenableBuilder(
       valueListenable: selectedArticleValue,
       builder: (context, value, child) => selectedArticleValue.value != null
-          ? _articlesPage.value.elementAt(selectedArticleValue.value!)
+          ? ArticlePage(
+              child: _articlesPage.value.elementAt(selectedArticleValue.value!))
           : SingleChildScrollView(
               physics: const BouncingScrollPhysics(),
               child: Column(children: [
